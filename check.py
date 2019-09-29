@@ -62,16 +62,22 @@ def correct(outTxt,answerTxt,cl):
             try:
                 if out["姓名"]==an["姓名"]:
                     sum+=0.2
+                else:
+                    print('第{0}条数据,可能出错 错误提示:'.format(i))
             except Exception as e:
                 print('第{0}条数据,可能出错 错误提示:'.format(i),e)
             try:
                 if out["手机"] == an["手机"]:
                     sum += 0.2
+                else:
+                    print('第{0}条数据,可能出错 错误提示:'.format(i))
             except Exception as e:
                print('第{0}条数据,可能出错 错误提示'.format(i),e)
             try:
                 if out["地址"]==an["地址"]:
                     sum+=0.6
+                else:
+                    print('第{0}条数据,可能出错 错误提示:'.format(i))
             except Exception as e:
                  print('第{0}条数据,可能出错 错误提示'.format(i),e)
     except Exception as e:
